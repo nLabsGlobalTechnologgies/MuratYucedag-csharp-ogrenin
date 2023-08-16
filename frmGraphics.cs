@@ -13,6 +13,7 @@ namespace EmployeeUI
         DbConnect db = new DbConnect();
         private void frmGraphics_Load(object sender, System.EventArgs e)
         {
+            //Burada Gruplama Kullanılmıştır sorgularda.
             //Şehirler Kodu aslında her şehre ait kaç personel var onun kodu
             SqlCommand cQuery = new SqlCommand("select City, Count(*) from Employees Group By City", db.Connection());
             SqlDataReader creader = cQuery.ExecuteReader();
